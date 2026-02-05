@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: insta-backend
+    env: docker
+    plan: free
+    dockerContext: ./insta-backend
+    filePath: ./insta-backend/Dockerfile
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: DB_HOST
+        fromDatabase:
+          name: instadb
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: instadb
+          property: port
+      - key: DB_NAME
+        fromDatabase:
+          name: instadb
+          property: databaseName
+      - key: DB_USERNAME
+        fromDatabase:
+          name: instadb
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: instadb
+          property: password
+
+databases:
+  - name: instadb
+    plan: free
+    databaseName: instadb
+    user: insta_user
