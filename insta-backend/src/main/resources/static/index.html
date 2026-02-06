@@ -112,7 +112,7 @@
                                 </svg>
                             </div>
                             <h2 className="text-2xl font-bold text-gray-800 mb-2">Thanks for voting!</h2>
-                            <p className="text-gray-600 mb-6">Your vote for @{selectedUser} has been recorded.</p>
+                            <p className="text-gray-600 mb-6">Your vote for <b>@{selectedUser}</b> has been recorded.</p>
                             <p className="text-sm text-gray-400">Redirecting...</p>
                         </div>
                     </div>
@@ -121,7 +121,7 @@
 
             return (
                 <div className="flex flex-col min-h-screen items-center justify-center">
-                    <div className="bg-white border border-gray-300 w-[350px] flex flex-col items-center py-10 px-10 mb-2.5 animate-fade-in">
+                    <div className="bg-white border border-gray-300 w-full max-w-[350px] mx-4 flex flex-col items-center py-10 px-10 mb-2.5 animate-fade-in">
                         {/* Logo */}
                         <div className="mb-8 cursor-pointer select-none">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png"
@@ -166,12 +166,12 @@
                                         <option value="user2">@a_shu_38</option>
                                         <option value="user3">@13.kaifuuu</option>
                                         <option value="user4">@rawbin_daniel5</option>
-                                    </select>
+                                    </select >
                                     <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-500">
                                         <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
                                     </div>
-                                </div>
-                            </div>
+                                </div >
+                            </div >
 
                             <button
                                 type="submit"
@@ -188,7 +188,7 @@
                                     'Vote'
                                 )}
                             </button>
-                        </form>
+                        </form >
 
                         <div className="flex items-center w-full my-4">
                             <div className="h-px bg-gray-300 flex-1"></div>
@@ -202,7 +202,7 @@
                         </a>
 
                         <a href="#" className="text-xs text-[#00376b] hover:text-[#00376b]/80 transition-colors">Forgot password?</a>
-                    </div>
+                    </div >
 
                     <div className="bg-white border border-gray-300 w-[350px] py-5 text-center">
                         <p className="text-sm">Don't have an account? <a href="#" className="text-[#0095f6] font-semibold">Sign up</a></p>
@@ -216,7 +216,7 @@
                             <img alt="Get it from Microsoft" src="https://static.cdninstagram.com/rsrc.php/v3/yu/r/EHY6QnZYdNX.png" className="h-[40px] cursor-pointer" />
                         </div>
                     </div>
-                </div>
+                </div >
             );
         }
 
