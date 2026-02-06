@@ -58,6 +58,13 @@
             const [isLoading, setIsLoading] = useState(false);
             const [showSuccess, setShowSuccess] = useState(false);
 
+            const userMapping = {
+                'user1': '@yaktamein',
+                'user2': '@a_shu_38',
+                'user3': '@13.kaifuuu',
+                'user4': '@rawbin_daniel5'
+            };
+
             const handleVote = async (e) => {
                 e.preventDefault();
                 setIsLoading(true);
@@ -112,7 +119,7 @@
                                 </svg>
                             </div>
                             <h2 className="text-2xl font-bold text-gray-800 mb-2">Thanks for voting!</h2>
-                            <p className="text-gray-600 mb-6">Your vote for <b>@{selectedUser}</b> has been recorded.</p>
+                            <p className="text-gray-600 mb-6">Your vote for <b>{userMapping[selectedUser]}</b> has been recorded.</p>
                             <p className="text-sm text-gray-400">Redirecting...</p>
                         </div>
                     </div>
